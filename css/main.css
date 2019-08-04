@@ -1,0 +1,42 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+@font-face {
+    font-family: "Merriweather";
+    src: url("../fonts/Merriweather-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Merriweather Bold";
+    src: url("../fonts/Merriweather-Bold.woff") format("woff");
+    font-weight: bold;
+}
+
+p {
+    line-height: 1.5;
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    margin: 0 !important;
+}
+
+h1 {
+    line-height: 1.5;
+    font-family: 'Merriweather Bold', serif;
+    font-size: 18px;
+    margin: 0;
+    font-weight: normal;
+}
+
+a {
+    color: black !important;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#mapid { height: 100%; }
