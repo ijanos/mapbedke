@@ -15,11 +15,11 @@ body {
     font-weight: bold;
 }
 
-p {
+.leaflet-popup-content p {
     line-height: 1.5;
     font-family: 'Merriweather', serif;
     font-size: 18px;
-    margin: 0 !important;
+    margin: 0;
 }
 
 h1 {
@@ -30,8 +30,8 @@ h1 {
     font-weight: normal;
 }
 
-a {
-    color: black !important;
+.leaflet-popup-content a {
+    color: black;
     text-decoration: none;
 }
 
