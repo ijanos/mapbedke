@@ -1,4 +1,8 @@
 $(document).ready(function() {
+
+  document.fonts.load("18px Merriweather");
+  document.fonts.load("18px Merriweather Bold");
+
   var corner1 = L.latLng(47.442,19.144);
   var corner2 = L.latLng(47.6, 18.984);
   var bounds = L.latLngBounds(corner1, corner2);
