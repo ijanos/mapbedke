@@ -36,10 +36,10 @@ $(document).ready(function() {
       $.each(coords, function(_idx, coord) {
         var marker = L.marker(coord, {
           icon: icon,
-          title: restaurant.name,
           riseOnHover: true
         }).addTo(mymap);
         marker.bindPopup("<h1><a target=\"_blank\" rel=\"noopener\" rel=\"nofollow\" href=" + restaurant.url + ">" + restaurant.name + "</a></h1><p>" + restaurant.menu.join('<br>') + "</p>");
+        marker.bindTooltip(restaurant.name);
       });
     });
   });
