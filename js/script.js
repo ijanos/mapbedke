@@ -21,7 +21,9 @@ $(document).ready(function() {
   });
 
   L.tileLayer('https://tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=4be9ad68d7594b7783e012b23d980580', {
-    attribution: '<a href="https://ebed.today">Ebed.today</a> | Maps &copy; <a href="https://www.thunderforest.com">Thunderforest</a>, Data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    attribution: '<a href="https://ebed.today">Ebed.today</a> | '
+      + 'Maps &copy; <a href="https://www.thunderforest.com">Thunderforest</a>, '
+      + 'Data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     minZoom: 13,
     maxZoom: 17,
     maxBounds: bounds
@@ -42,7 +44,13 @@ $(document).ready(function() {
           icon: icon,
           riseOnHover: true
         }).addTo(mymap);
-        marker.bindPopup("<h1><a target=\"_blank\" rel=\"noopener\" rel=\"nofollow\" href=" + restaurant.url + ">" + restaurant.name + "</a></h1><p>" + restaurant.menu.join('<br>') + "</p>");
+        var popup = L.popup({
+          minWidth: 120,
+          maxWidth: 320
+        }).setContent("<h1><a target=\"_blank\" rel=\"noopener\" rel=\"nofollow\" href="
+             + restaurant.url + ">" + restaurant.name + "</a></h1><p>"
+             + restaurant.menu.join('<br>') + "</p>");
+        marker.bindPopup(popup);
         marker.bindTooltip(restaurant.name);
       });
     });
