@@ -52,6 +52,7 @@ $(document).ready(function() {
              + restaurant.menu.join('<br>') + "</p>");
         marker.bindPopup(popup);
         marker.bindTooltip(restaurant.name);
+        marker.on({ click: function() { this.closeTooltip() }});
       });
     });
   });
