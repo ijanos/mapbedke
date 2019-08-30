@@ -17,6 +17,7 @@ body {
 
 .leaflet-popup-content p {
     line-height: 1.5;
+    overflow-wrap: break-word;
     font-family: 'Merriweather', serif;
     font-size: 18px;
     margin: 0;
